@@ -53,9 +53,9 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 
 * Obrazy znajdują się w katalogu `./images/`. Dodawanie obrazu do dokumentu polega na umieszczeniu obrazu w katalogu, a następnie stworzeniu odwołania w dokumencie [main](./main.md), np. `(alternatywny_tekst_dla_obrazu)[./images/]`
 
-* Każdą jednostkową część pracy [commitujemy](https://git-scm.com/docs/git-commit) w lokalnym repozytorium na swojej maszynie.
+* Każdą jednostkową część pracy [commitujemy](https://git-scm.com/docs/git-commit) w lokalnym repozytorium na swojej maszynie na branchu dedykowanym danemu **issue**.
 
-* Gdy chcemy wyeksportować zmiany do centralnego repozytorium otwieramy [pull request](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request)
+* W celu uaktualnienia centralnego repozytroium, należy wypushować brancha do centralnego repozytorium i otworzyć [pull request](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request) danego brancha z branchem **master**
 
 * Za pomocą funkcjonalości serwisu **GitHub** - [Issues](https://github.com/features/issues):
 
