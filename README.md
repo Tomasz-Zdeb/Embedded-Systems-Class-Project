@@ -63,7 +63,7 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 
 ## Cykl życia projektu
 
-[] Inicjalizacja repozytorium
+- [ ] Inicjalizacja repozytorium
 
 ## Materiały
 
