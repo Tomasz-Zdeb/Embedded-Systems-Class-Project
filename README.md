@@ -63,7 +63,16 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 
 ## Cykl życia projektu
 
-- [ ] Inicjalizacja repozytorium
+- [x] Inicjalizacja repozytorium
+- [x] Stworzenie struktury projektu
+- [x] Stworzenie zasad współtworzenia projektu
+- [ ] Dodanie wszystkich uczestników jako współtwórców repozytorium na **GitHub-ie**
+- [ ] **Issue**: Ustalenie funkcjonalności projektu
+- [ ] Utworzenie **issues** odpowiadających wszystkim funkcjonalnościom
+- [ ] Utworzenie **issues** odpowiadających pozostałym elementom realizacji projektu jak: **stworzenie schematu elektrycznego**
+- [ ] Realizacja rzeczonych issues
+- [ ] Publikacja projektu w formacie `.pdf`
+- [ ] Dostarczenie projektu do prowadzącego laboratorium
 
 ## Materiały
 
