@@ -14,7 +14,8 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 ## Realizacja projektu
 
 1. Ustalenie funkcjonalności, które urządzenie będzie realizować, na przykład:
-  
+
+* > pomiar temperatury za pomocą urządzenia pomiarowego np. **termorezystora**
 * > przechowywanie szeregu czasowego wartości temperatur w pamięci trwałej
 * > zapewnienie interfejsu do komunikacji z innymi urządzeniami, np. **Ethernet**
 * > monitoring wartości temperatury w czasie rzeczywistym przy pomocy wyświetlacza alfanumerycznego **LCD**
