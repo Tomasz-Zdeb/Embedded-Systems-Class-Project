@@ -79,7 +79,7 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 
 Na podstawie researchu przeprowadzonego w [Issue: #4](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/4) schemat elektryczny urządzenia będzie tworzony przy pomocy oprogramowania: [KiCad](https://www.kicad.org/).
 
-Schemat elektyczny znajduje się w katalogu: `/schematics/`
+Schemat elektyczny znajduje się w katalogu: `/schematics/`.
 
 ## Materiały
 
