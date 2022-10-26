@@ -75,7 +75,7 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 - [ ] Publikacja projektu w formacie `.pdf`
 - [ ] Dostarczenie projektu do prowadzącego laboratorium
 
-##
+## Schemat elektryczny
 
 Na podstawie researchu przeprowadzonego w [Issue: #4](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/4) schemat elektryczny urządzenia będzie tworzony przy pomocy oprogramowania: [KiCad](https://www.kicad.org/).
 
