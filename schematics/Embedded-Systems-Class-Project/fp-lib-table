@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "Libraries")(type "KiCad")(uri "D:/synchronized_data_tz/university/PK/Semestr_V/SystemyWbudowane/Embedded-Systems-Class-Project/schematics/Libraries.pretty")(options "")(descr ""))
+  (lib (name "Library")(type "KiCad")(uri "D:/synchronized_data_tz/university/PK/Semestr_V/SystemyWbudowane/Embedded-Systems-Class-Project/schematics/Libraries/Library.pretty")(options "")(descr ""))
+)
