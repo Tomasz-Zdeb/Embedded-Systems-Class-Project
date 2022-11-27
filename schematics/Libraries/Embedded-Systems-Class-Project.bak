@@ -215,7 +215,7 @@
     (symbol "MicroSD-card-SD-Mode_0_1"
       (rectangle (start -12.7 3.81) (end 12.7 -10.16)
         (stroke (width 0) (type default) (color 0 0 0 0))
-        (fill (type background))
+        (fill (type none))
       )
     )
     (symbol "MicroSD-card-SD-Mode_1_1"
