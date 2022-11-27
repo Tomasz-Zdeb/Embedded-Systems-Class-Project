@@ -68,7 +68,7 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 - [x] Stworzenie struktury projektu
 - [x] Stworzenie zasad współtworzenia projektu
 - [x] Dodanie wszystkich uczestników jako współtwórców repozytorium na **GitHub-ie**
-- [ ] **Issue**: Ustalenie funkcjonalności projektu
+- [x] **Issue**: Ustalenie funkcjonalności projektu
 - [ ] Utworzenie **issues** odpowiadających wszystkim funkcjonalnościom
 - [ ] Utworzenie **issues** odpowiadających pozostałym elementom realizacji projektu jak: **stworzenie schematu elektrycznego**
 - [ ] Realizacja rzeczonych issues
