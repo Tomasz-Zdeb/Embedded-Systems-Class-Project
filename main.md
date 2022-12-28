@@ -14,6 +14,8 @@
 
 ### Emisja sygnałów dźwiękowych po przekroczeniu zadanej wartości progowej temperatury
 
+## Potencjalna konfiguracja
+
 ## Schemat elektryczny
 
 ## Kosztorys
