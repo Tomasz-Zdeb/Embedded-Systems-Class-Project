@@ -58,9 +58,9 @@ Stworzyć Issue dotyczące uzupełnienia tego pliku danymi z [Issue 28](https://
 - moduł Bluetooth: 27,80 zł
 - mikroprocesor: 39,20 zł
 - buzzer: 5,90 zł
-- tact Switch (niebieski): 3,40 zł
-- tact Switch (czerwony): 3,40 zł
-- tact Switch (czarny): 2,90 zł
+- Tact Switch (niebieski): 3,40 zł
+- Tact Switch (czerwony): 3,40 zł
+- Tact Switch (czarny): 2,90 zł
 - gniazdo karty pamięci SD z wyrzutnikiem: 2,60 zł
 - karta pamieci: 293,70 zł
 - wyświetlacz LCD + konwerter: 24,70 zł
