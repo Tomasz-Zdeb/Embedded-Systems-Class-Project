@@ -71,4 +71,4 @@ Stworzyć Issue dotyczące uzupełnienia tego pliku danymi z [Issue 28](https://
 485,05 zł
 
 ### Potencjalna cena rynkowa urządzenia:
-679,07 zł - przyjąłem 140% ceny komponentów aby pokryć koszty produkcji izapewnić marżę dla wytwórcy
+679,07 zł - przyjąłem 140% ceny komponentów aby pokryć koszty produkcji i zapewnić marżę dla wytwórcy
