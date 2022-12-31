@@ -54,7 +54,7 @@ Stworzyć Issue dotyczące uzupełnienia tego pliku danymi z [Issue 28](https://
 
 ## Kosztorys
 
-### Ceny jednostkowe komponentów:
+### Ceny jednostkowe komponentów
 - moduł Bluetooth: 27,80 zł
 - mikroprocesor: 39,20 zł
 - buzzer: 5,90 zł
@@ -67,8 +67,8 @@ Stworzyć Issue dotyczące uzupełnienia tego pliku danymi z [Issue 28](https://
 - termopara typu K: 21,47 zł
 - chip do interpretowania napięć: 49,98 zł
 - obudowa: 10 zł
-### Sumaryczna cena komponentów urządzenia:
+### Sumaryczna cena komponentów urządzenia
 485,05 zł
 
-### Potencjalna cena rynkowa urządzenia:
+### Potencjalna cena rynkowa urządzenia
 679,07 zł - przyjąłem 140% ceny komponentów aby pokryć koszty produkcji i zapewnić marżę dla wytwórcy
