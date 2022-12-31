@@ -54,4 +54,19 @@ Stworzyć Issue dotyczące uzupełnienia tego pliku danymi z [Issue 28](https://
 
 ## Kosztorys
 
-[Issue 29](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/29)
+Ceny jednostkowe komponentów:
+-moduł Bluetooth: 27,80 zł
+-mikroprocesor: 39,20 zł
+-buzzer: 5,90 zł
+-tact Switch (niebieski): 3,40 zł
+-tact Switch (czerwony): 3,40 zł
+-tact Switch (czarny): 2,90 zł
+-gniazdo karty pamięci SD z wyrzutnikiem: 2,60 zł
+-karta pamieci: 293,70 zł
+-wyświetlacz LCD + konwerter: 24,70 zł
+-termopara typu K: 21,47 zł
+-chip do interpretowania napięć: 49,98 zł
+-obudowa: 10 zł
+Razem: 485,05 zł
+
+Potencjalna cena rynkowa urządzenia: 679,07 zł - przyjąłem 140% ceny komponentów aby pokryć koszty produkcji izapewnić marżę dla wytwórcy
