@@ -33,29 +33,29 @@ W urządzeniu do pomiaru temperatury wykorzystywana jest termopara typu K. Do in
 #### Termopara
 
 Poniżej przedstawiona jest częściowa charakterystyka wykorzystywanej termopary tpu K:
-<center>
+<p align="center">
 
 |Zakres temperatur|Precyzja pomiaru|Zakres napięcia wyjściowego
 |:-:|:-:|:-:|
 |od -100°C do 500°C|±2°C|od -6mV do +20mV|
 
-</center>
+</p>
 
 #### Konwerter
 
 Poniżej przedstawiona jest częściowa charakterystyka wykorzystywanego konwertera **MAX31855KASA**:
 
-<center>
+<p align="center">
 
 |Zakres temperatury pracy|Rozdzielczość mierzonej temperatury|
 |:-:|:-:|
 |od -40°C do 125°C|0.25°C|
 
-</center>
+</p>
 
 Precyzja pomiaru a mierzona temperatura:
 
-<center>
+<p align="center">
 
 |Mierzona temperatura|Temperatura pracy|Precyzja pomiaru|
 |:-:|:-:|:-:|
@@ -63,7 +63,7 @@ Precyzja pomiaru a mierzona temperatura:
 |od +700°C do +1350°C|od -20°C do +85°C|±4°C|
 |od -270°C do +1372°C|od -40°C do +125°C|±6°C|
 
-</center>
+</p>
 
 #### Funkcjonalność
 
@@ -71,11 +71,9 @@ Pomiar temperatury odbywa się za pomocą termopary typu K. Typ K został wybran
 
 #### Schemat podłączenia konwertera i termopary
 
-<center>
-
+<p align="center">
 <img src="./images/thermocouple-converter.png" width="500"/>
-
-</center>
+</p>
 
 ### Monitoring pomiaru w czasie rzeczywistym na alfanumerycznym ekranie LCD
 
