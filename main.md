@@ -28,7 +28,37 @@ Projektowane urządzenie stanowi kompaktowe i przystępne cenowo rozwiązanie do
 
 ### Pomiar temperatury
 
-[Issue 11](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/11)
+W urządzeniu do pomiaru temperatury wykorzystywana jest termopara typu K. Do interpretowania oraz przekształcania wyników pomiaru termopary wykorzystywany jest dodatkowo konwerter **MAX31855KASA**.
+
+#### Termopara
+
+Poniżej przedstawiona jest częściowa charakterystyka wykorzystywanej termopary tpu K:
+
+|Zakres temperatur|Precyzja pomiaru|Zakres napięcia wyjściowego
+|:-:|:-:|:-:|
+|od -100°C do 500°C|±2°C|od -6mV do +20mV|
+
+#### Konwerter
+
+Poniżej przedstawiona jest częściowa charakterystyka wykorzystywanego konwertera **MAX31855KASA**:
+|Zakres temperatury pracy|Rozdzielczość mierzonej temperatury|
+|:-:|:-:|
+|od -40°C do 125°C|0.25°C|
+
+Precyzja pomiaru a mierzona temperatura:
+|Mierzona temperatura|Temperatura pracy|Precyzja pomiaru|
+|:-:|:-:|:-:|
+|od -200°C do +700°C|od -20°C do +85°C|±2°C|
+|od +700°C do +1350°C|od -20°C do +85°C|±4°C|
+|od -270°C do +1372°C|od -40°C do +125°C|±6°C|
+
+#### Funkcjonalność
+
+Pomiar temperatury odbywa się za pomocą termopary typu K. Typ K został wybrany z uwagi na dużą uniwersalność, niszki koszt i powszechność. Dodatkowo typ K oferuje odpowiednio szeroki zakres temperatury pomiaru. By ułatwić interpretacje wyników pomiaru termopary, wykorzystywany jest konwerter **MAX31855KASA**, który przekształca napięcie wyjściowe termopary na wartość temperatury w trywialnym do odczytania sygnale cyfrowym, niewymagającym dodatkowych przekształceń lub obliczeń. Sygnał cyfrowy z konwertera jest następnie przesyłany do mikrokontrolera.
+
+#### Schemat podłączenia konwertera i termopary
+
+<img src="./images/thermocouple-converter.png" width="500"/>
 
 ### Monitoring pomiaru w czasie rzeczywistym na alfanumerycznym ekranie LCD
 
