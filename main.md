@@ -28,7 +28,52 @@ Projektowane urządzenie stanowi kompaktowe i przystępne cenowo rozwiązanie do
 
 ### Pomiar temperatury
 
-[Issue 11](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/11)
+W urządzeniu do pomiaru temperatury wykorzystywane są termopary typu K. Do interpretowania oraz przekształcania wyników pomiaru termopar wykorzystywane są dodatkowo konwertery **MAX31855KASA**.
+
+#### Termopara
+
+Poniżej przedstawiona jest częściowa charakterystyka wykorzystywanej termopary tpu K:
+<p align="center">
+
+|Zakres temperatur|Precyzja pomiaru|Zakres napięcia wyjściowego
+|:-:|:-:|:-:|
+|od -100°C do 500°C|±2°C|od -6mV do +20mV|
+
+</p>
+
+#### Konwerter
+
+Poniżej przedstawiona jest częściowa charakterystyka wykorzystywanego konwertera **MAX31855KASA**:
+
+<p align="center">
+
+|Zakres temperatury pracy|Rozdzielczość mierzonej temperatury|
+|:-:|:-:|
+|od -40°C do 125°C|0.25°C|
+
+</p>
+
+Precyzja pomiaru a mierzona temperatura:
+
+<p align="center">
+
+|Mierzona temperatura|Temperatura pracy|Precyzja pomiaru|
+|:-:|:-:|:-:|
+|od -200°C do +700°C|od -20°C do +85°C|±2°C|
+|od +700°C do +1350°C|od -20°C do +85°C|±4°C|
+|od -270°C do +1372°C|od -40°C do +125°C|±6°C|
+
+</p>
+
+#### Funkcjonalność
+
+Pomiar temperatury odbywa się za pomocą termopar typu K. Typ K został wybrany z uwagi na dużą uniwersalność, niszki koszt i powszechność. Dodatkowo typ K oferuje odpowiednio szeroki zakres temperatury pomiaru. By ułatwić interpretacje wyników pomiaru termopary, wykorzystywane są konwertery **MAX31855KASA**, które przekształcają napięcie wyjściowe termopar na wartość temperatury w trywialnym do odczytania sygnale cyfrowym, niewymagającym dodatkowych przekształceń lub obliczeń. Sygnał cyfrowy z konwerterów jest następnie przesyłany przez SPI do mostka SC18IS606, z którego do mikrokontrolera przesyłany jest po I²C.
+
+#### Schemat podłączenia konwertera i termopary
+
+<p align="center">
+<img src="./images/thermocouple-converter.png" width="500"/>
+</p>
 
 ### Monitoring pomiaru w czasie rzeczywistym na alfanumerycznym ekranie LCD
 
