@@ -93,7 +93,132 @@ Pomiar temperatury odbywa się za pomocą termopar typu K. Typ K został wybrany
 
 ## Potencjalna konfiguracja
 
-Stworzyć Issue dotyczące uzupełnienia tego pliku danymi z [Issue 28](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/28)
+### **SDIO**
+
+Wybrany mikroprocesor [STM32L151QDH6](https://www.mouser.pl/ProductDetail/STMicroelectronics/STM32L151QDH6?qs=pmcUWs1B1IIEPym5rr0MIA%3D%3D) obsługuje 4bitową obsługę **SDIO** (natywną komunikację z nośnikami w postaci kart SD i micro SD). Prawdopodobnie tryb 1-bitowy zapewniłby wystarczającą prędkość transmisji do zapisu danych pozyskiwanych przez urządzenie, przynajmniej dla wairantu z czteroma termoparami. Ze względu na możliwość dołączania kolejnych modułów rozszerzających liczbę termopar, bezpieczniej jest skorzystać z trybu w większej przepustowości.
+
+<p align="center">
+  <img src="./images/00-sdio.png" />
+</p>
+
+### **I2C**
+
+W przypadku konfiguracji interfejsu **I2C** można pozostawić domyślne ustawienia (tzn. nie zmniejszać prędkości zegara). Ze względu na możliwości rozszerzenia ilości używanych termopar wskazane jest zachowanie wysokiej przepustowości magistrali do przesyłu danych.
+
+<p align="center">
+  <img src="./images/01-I2C.png" />
+</p>
+
+<p align="center">
+  <img src="./images/02-I2C-config.png" />
+</p>
+
+Z analizy dokumentacji [konwertera napięć termopary](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/8) (tj. modułu interpretującego napięcie w kontekście temperatury):
+
+- <https://www.mouser.pl/new/maxim-integrated/maximmax31855/>
+- <https://www.mouser.pl/pdfDocs/MAX31855.pdf>
+
+oraz analizie materiałów dotyczących interfejsu **SPI**:
+
+- <https://www.youtube.com/watch?v=eFKeNPJq50g&ab_channel=Digi-Key>
+- <https://fastbitlab.com/nss-setting-stm32-master-slave-mode/>
+- <https://www.digikey.com/en/maker/projects/getting-started-with-stm32-how-to-use-spi/09eab3dfe74c4d0391aaaa99b0a8ee17>
+
+<p align="center">
+  <img src="./images/03-SPI.png" />
+</p>
+
+stwierdzono, że w celu zapewnienia właściwej komunikacji z komponentem używającym tej magistrali konfiguracja interfejsu **SPI** polegała będzie na ustawieniu trybu:
+
+- **Master** (Mikroprocesor-master, konwerter-slave)
+- **Half-Duplex**
+
+Ze względu na brak jednolitego standardu komunikacji **SPI** istotne są parametry **CPOL** i **CPHA** określające przebieg transmisji względem polaryzaji zegara i linii danych.
+
+<p align="center">
+  <img src="./images/spi_modes.png" />
+</p>
+
+Według dokumentacji konwertera należy przyjąć wartości:
+
+- **CPOL** = 0
+- **CPHA** = 0
+
+Ze względu na prostotę użytkowania interfejsu **I2C** i potrzębę podłączenia większej ilości urządzeń wykorzystujących interfejs **SPI** (pomiar przy pomocy więcej niż jednej termopary) w projekcie korzystamy z [mostka I2C do SPI](https://www.mouser.pl/ProductDetail/NXP-Semiconductors/SC18IS606PWJ?qs=pBJMDPsKWf02qtdqbj2bbA%3D%3D), który pozwala na podłączenie do trzech linii (urządzeń) **SPI** (wg. [dokumentacji](https://www.mouser.pl/datasheet/2/302/SC18IS606-2933187.pdf)).
+
+### **PWM**
+
+Najistotniejszym elementem konfiguracji wyjścia PWM jest ustawienie źródła sygnału zegara na zegar wewnętrzny i ustawienie generowania sygnału PWM na kanale pierwszym. Pozostałe parametry można pozostawić z wartościami domyślnymi.
+
+<p align="center">
+  <img src="./images/06-PWM-initial-config.png" />
+</p>
+
+W kofniguracji wykorzystywany jest wewnętrzny zegar mirkoprocesora (Zastosowanie zewnętrznego zegara byłoby w tym przypadku niczym nieuzasadnione)
+
+<p align="center">
+  <img src="./images/07-PWM-lanes.png" />
+</p>
+
+### **GPIO**
+
+W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezagospodarowanych pinów (których wybrany procesor posiada sporo) i ustawienia ich trybu pracy na input mode.
+
+<p align="center">
+  <img src="./images/08-GPIOs.png" />
+</p>
+
+### Zestawienie pinów
+
+- **SDIO**
+
+<p align=center>
+
+|Sygnał|Pin|
+|:-:|:-:|
+|D0|PC8|
+|D1|PC9|
+|D2|PC10|
+|D3|PC11|
+|CK|PC12|
+|CMD|PD2|
+
+</p>
+
+- **I2C**
+
+<p align=center>
+
+|Sygnał|Pin|
+|:-:|:-:|
+|SCL|PB8|
+|SDA|PB9|
+
+</p>
+
+- **PWM**
+
+<p align=center>
+
+|Sygnał|Pin|
+|:-:|:-:|
+|CH1|PA5|
+
+</p>
+
+- **GPIO**
+
+<p align = center>
+
+|Pin|
+|:-:|
+|PB12|
+|PB13|
+|PD10|
+|PD13|
+|PE15|
+
+</p>
 
 ## Schemat elektryczny
 
