@@ -28,7 +28,7 @@ Projektowane urządzenie stanowi kompaktowe i przystępne cenowo rozwiązanie do
 
 ### Pomiar temperatury
 
-W urządzeniu do pomiaru temperatury wykorzystywana jest termopara typu K. Do interpretowania oraz przekształcania wyników pomiaru termopary wykorzystywany jest dodatkowo konwerter **MAX31855KASA**.
+W urządzeniu do pomiaru temperatury wykorzystywane są termopary typu K. Do interpretowania oraz przekształcania wyników pomiaru termopar wykorzystywane są dodatkowo konwertery **MAX31855KASA**.
 
 #### Termopara
 
@@ -67,7 +67,7 @@ Precyzja pomiaru a mierzona temperatura:
 
 #### Funkcjonalność
 
-Pomiar temperatury odbywa się za pomocą termopary typu K. Typ K został wybrany z uwagi na dużą uniwersalność, niszki koszt i powszechność. Dodatkowo typ K oferuje odpowiednio szeroki zakres temperatury pomiaru. By ułatwić interpretacje wyników pomiaru termopary, wykorzystywany jest konwerter **MAX31855KASA**, który przekształca napięcie wyjściowe termopary na wartość temperatury w trywialnym do odczytania sygnale cyfrowym, niewymagającym dodatkowych przekształceń lub obliczeń. Sygnał cyfrowy z konwertera jest następnie przesyłany do mikrokontrolera.
+Pomiar temperatury odbywa się za pomocą termopar typu K. Typ K został wybrany z uwagi na dużą uniwersalność, niszki koszt i powszechność. Dodatkowo typ K oferuje odpowiednio szeroki zakres temperatury pomiaru. By ułatwić interpretacje wyników pomiaru termopary, wykorzystywane są konwertery **MAX31855KASA**, które przekształcają napięcie wyjściowe termopar na wartość temperatury w trywialnym do odczytania sygnale cyfrowym, niewymagającym dodatkowych przekształceń lub obliczeń. Sygnał cyfrowy z konwerterów jest następnie przesyłany przez SPI do mostka SC18IS606, z którego do mikrokontrolera przesyłany jest po I²C.
 
 #### Schemat podłączenia konwertera i termopary
 
