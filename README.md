@@ -11,7 +11,7 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 * projekt powinien zawierać schemat elektryczny całego urządzenia
 * projekt ma formę dokumentu `.pdf`
 
-## Realizacja projektu
+## Cykl życia projektu
 
 1. Ustalenie funkcjonalności, które urządzenie będzie realizować, na przykład:
 
@@ -43,7 +43,7 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 
 6. Eksport dokumentu do `.pdf` i prezentacja prowadzącemu przedmiot: <mateusz.michalek@pk.edu.pl>
 
-## Tworzenie projektu
+## Realizacja projektu
 
 * Zaleca się korzystanie z edytora: [VS Code](https://code.visualstudio.com/)
 
@@ -62,15 +62,15 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
   * przypisujemy dane zadanie do swojej osoby
   * tworzymy nowe zadania
 
-## Cykl życia projektu
+## Status projektu
 
 - [x] Inicjalizacja repozytorium
 - [x] Stworzenie struktury projektu
 - [x] Stworzenie zasad współtworzenia projektu
 - [x] Dodanie wszystkich uczestników jako współtwórców repozytorium na **GitHub-ie**
 - [x] **Issue**: Ustalenie funkcjonalności projektu
-- [ ] Utworzenie **issues** odpowiadających wszystkim funkcjonalnościom
-- [ ] Utworzenie **issues** odpowiadających pozostałym elementom realizacji projektu jak: **stworzenie schematu elektrycznego**
+- [x] Utworzenie **issues** odpowiadających wszystkim funkcjonalnościom
+- [x] Utworzenie **issues** odpowiadających pozostałym elementom realizacji projektu jak: **stworzenie schematu elektrycznego**
 - [ ] Realizacja rzeczonych issues
 - [ ] Publikacja projektu w formacie `.pdf`
 - [ ] Dostarczenie projektu do prowadzącego laboratorium
@@ -79,11 +79,15 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 
 Na podstawie researchu przeprowadzonego w [Issue: #4](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/4) schemat elektryczny urządzenia będzie tworzony przy pomocy oprogramowania: [KiCad](https://www.kicad.org/).
 
-Schemat elektyczny znajduje się w katalogu: `/schematics/`.
+Schemat elektyczny znajduje się w katalogu: `/schematics/`
 
 ## Materiały
 
+<p align="center">
+
 <img src="./images/tablica.jpg" alt="zdjecie tablicu z sugestiami prowadzącego" width="400"/>
+
+</p>
 
 ## Opiekun repozytorium
 
