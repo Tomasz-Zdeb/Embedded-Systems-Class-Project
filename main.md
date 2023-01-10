@@ -83,7 +83,30 @@ Pomiar temperatury odbywa się za pomocą termopar typu K. Typ K został wybrany
 
 [Issue 21](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/21)
 
-### Komunikacja przy pomocy interfejsu bluetooth - odczyt danych w czasie rzeczywistym i zapisanych na karcie
+### Komunikacja przy pomocy interfejsu Bluetooth
+
+#### Funkcjonalność
+
+
+Komunikacja przy użyciu **Blueetooth** pozwala na odczyt danych w czasie rzeczywistym, oraz przegląd danych zapisanych na **karcie SD**. Takie rozwiązanie wymaga stworzenia dedykowanej aplikacji dla urządzenia.
+
+#### Interfejs
+
+Do komunikacji Bluetooth użyty został moduł **BMD-330** firmy [uBlox](https://www.u-blox.com/en/). Jest to komponent dostępny w sieci dostawcy [Mouser Electronics](https://www.mouser.pl/), cechujący się zadowalającym stosunkiem ceny do oferowanych parametrów.
+
+Pozwala na komunikację w standardzie **Bluetooth 5.0** z uzyskaniem mocy wyjściowej na poziomie: **4 dBm** umożliwiając komunikację z prędkością do **2 Mb/s**. Urządzenie należy do klasy  **Bluetooth Low Energy** pobierając nie więcej niż **12 mA** (dla napięcia zasilania z przedziału **1.7 V - 3.6 V**).
+
+<p align="center">
+  <img src="./images/bt-module-drawing.png" width=500px />
+</p>
+
+Moduł **BMD-330** jest stosunkowo złożonym urządzeniem zawierającym własny mikroprocesor, wbudowaną antenę i wiele komponentów pozwalających na wykorzystanie go na wiele sposobów. W naszym przypadku będziemy komunikować się z modułem przy użyciu magistrali **I2C**.
+
+<p align="center">
+  <img src="./images/bt-module-diagram.png" width=500px />
+</p>
+
+Zestawienie pinów modułu jest również bardzo obszerne, dlatego ze względu na przejrzystość schematu, stworzyliśmy własny model urządzenia zawierający jedynie używane przez nas linie, czyli zasilanie i linie interfejsu **I2C**.
 
 [Issue 26](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/26)
 
