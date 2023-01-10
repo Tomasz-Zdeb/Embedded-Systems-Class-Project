@@ -8,7 +8,7 @@ Realizacja projektu polega na zaprojektowaniu urządzenia embedded (systemu wbud
 - dostępność
 - przystępność komponentu (tj. dostępność dokumentacji i schematów pozwalających na integrację komponentu)
 
-W projekcie przedstawiono także schemat elektryczny potencjalnego urządzenia obrazujący połączenia komponentów przy zastosowaniu odpowiednich interfejsów. 
+W projekcie przedstawiono także schemat elektryczny potencjalnego urządzenia obrazujący połączenia komponentów przy zastosowaniu odpowiednich interfejsów.
 
 ## Skład grupy
 
@@ -33,11 +33,12 @@ W urządzeniu do pomiaru temperatury wykorzystywane są termopary typu K. Do int
 #### Termopara
 
 Poniżej przedstawiona jest częściowa charakterystyka wykorzystywanej termopary tpu K:
+
 <p align="center">
 
-|Zakres temperatur|Precyzja pomiaru|Zakres napięcia wyjściowego
-|:-:|:-:|:-:|
-|od -100°C do 500°C|±2°C|od -6mV do +20mV|
+| Zakres temperatur  | Precyzja pomiaru | Zakres napięcia wyjściowego |
+| :----------------: | :--------------: | :-------------------------: |
+| od -100°C do 500°C |       ±2°C       |      od -6mV do +20mV       |
 
 </p>
 
@@ -47,9 +48,9 @@ Poniżej przedstawiona jest częściowa charakterystyka wykorzystywanego konwert
 
 <p align="center">
 
-|Zakres temperatury pracy|Rozdzielczość mierzonej temperatury|
-|:-:|:-:|
-|od -40°C do 125°C|0.25°C|
+| Zakres temperatury pracy | Rozdzielczość mierzonej temperatury |
+| :----------------------: | :---------------------------------: |
+|    od -40°C do 125°C     |               0.25°C                |
 
 </p>
 
@@ -57,11 +58,11 @@ Precyzja pomiaru a mierzona temperatura:
 
 <p align="center">
 
-|Mierzona temperatura|Temperatura pracy|Precyzja pomiaru|
-|:-:|:-:|:-:|
-|od -200°C do +700°C|od -20°C do +85°C|±2°C|
-|od +700°C do +1350°C|od -20°C do +85°C|±4°C|
-|od -270°C do +1372°C|od -40°C do +125°C|±6°C|
+| Mierzona temperatura | Temperatura pracy  | Precyzja pomiaru |
+| :------------------: | :----------------: | :--------------: |
+| od -200°C do +700°C  | od -20°C do +85°C  |       ±2°C       |
+| od +700°C do +1350°C | od -20°C do +85°C  |       ±4°C       |
+| od -270°C do +1372°C | od -40°C do +125°C |       ±6°C       |
 
 </p>
 
@@ -87,14 +88,13 @@ Pomiar temperatury odbywa się za pomocą termopar typu K. Typ K został wybrany
 
 #### Funkcjonalność
 
-
 Komunikacja przy użyciu **Blueetooth** pozwala na odczyt danych w czasie rzeczywistym, oraz przegląd danych zapisanych na **karcie SD**. Takie rozwiązanie wymaga stworzenia dedykowanej aplikacji dla urządzenia.
 
 #### Interfejs
 
 Do komunikacji Bluetooth użyty został moduł **BMD-330** firmy [uBlox](https://www.u-blox.com/en/). Jest to komponent dostępny w sieci dostawcy [Mouser Electronics](https://www.mouser.pl/), cechujący się zadowalającym stosunkiem ceny do oferowanych parametrów.
 
-Pozwala na komunikację w standardzie **Bluetooth 5.0** z uzyskaniem mocy wyjściowej na poziomie: **4 dBm** umożliwiając komunikację z prędkością do **2 Mb/s**. Urządzenie należy do klasy  **Bluetooth Low Energy** pobierając nie więcej niż **12 mA** (dla napięcia zasilania z przedziału **1.7 V - 3.6 V**).
+Pozwala na komunikację w standardzie **Bluetooth 5.0** z uzyskaniem mocy wyjściowej na poziomie: **4 dBm** umożliwiając komunikację z prędkością do **2 Mb/s**. Urządzenie należy do klasy **Bluetooth Low Energy** pobierając nie więcej niż **12 mA** (dla napięcia zasilania z przedziału **1.7 V - 3.6 V**).
 
 <p align="center">
   <img src="./images/bt-module-drawing.png" width=500px />
@@ -112,7 +112,17 @@ Zestawienie pinów modułu jest również bardzo obszerne, dlatego ze względu n
 
 ### Emisja sygnałów dźwiękowych po przekroczeniu zadanej wartości progowej temperatury
 
-[Issue 27](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/27)
+#### Moduł buzzera
+
+Do zrealizowania funkcjonalności użyto [modułu buzzera](https://botland.com.pl/buzzery-generatory-dzwieku/2963-modul-z-buzzerem-pasywnym-bez-generatora-czarny-5904422359263.html?cd=18298825651&ad=&kd=&gclid=CjwKCAiA76-dBhByEiwAA0_s9bgiyegkOrxPVHvjLPdCjIwSULFG82rgwxfOtnJEmOHJ_1PyzE-WoBoCAmwQAvD_BwE) bez generatora od firmy **Iduino**.
+
+Moduł zasilany jest napięciem **5V**, a pobór prądu nie przekracza **30mA**. Moduł generuje sygnał przy podaniu stanu wysokiego na pin **S**.
+
+#### Funkcjonalność
+
+Zgodnie z [instrukcją](https://arduinomodules.info/ky-006-passive-buzzer-module/?fbclid=IwAR2xrSQEQvXJQoSaBCyPUAT1Qpdzo6-RQKKRTS8gIRmnc9uBtt7pPz5gDqI) urządzenie będzie pozwalało na generowanie sygnałów dźwiękowych o różnej wysokośći dzięki modulacji **PWM**.
+
+Regulacji progu wyzwolenia alarmu oraz trybu działania tj. wyzwalanie przy zejściu poniżej zadanej temperatury albo po wyjściu ponad zadaną temperaturę jak i całkowitego wyłączenia alarmu dla danej termopary dokonujemy poprzez przyciski (tact switch'e) połączone z wejściami cyfrowymi mikroprocesora. Z racji na możliwość konfiguracji wbudowanych rezystorów pull-up albo pull-down na schemacie elektrycznym pominięto rezystory.
 
 ## Potencjalna konfiguracja
 
@@ -197,14 +207,14 @@ W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezag
 
 <p align=center>
 
-|Sygnał|Pin|
-|:-:|:-:|
-|D0|PC8|
-|D1|PC9|
-|D2|PC10|
-|D3|PC11|
-|CK|PC12|
-|CMD|PD2|
+| Sygnał | Pin  |
+| :----: | :--: |
+|   D0   | PC8  |
+|   D1   | PC9  |
+|   D2   | PC10 |
+|   D3   | PC11 |
+|   CK   | PC12 |
+|  CMD   | PD2  |
 
 </p>
 
@@ -212,10 +222,10 @@ W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezag
 
 <p align=center>
 
-|Sygnał|Pin|
-|:-:|:-:|
-|SCL|PB8|
-|SDA|PB9|
+| Sygnał | Pin |
+| :----: | :-: |
+|  SCL   | PB8 |
+|  SDA   | PB9 |
 
 </p>
 
@@ -223,9 +233,9 @@ W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezag
 
 <p align=center>
 
-|Sygnał|Pin|
-|:-:|:-:|
-|CH1|PA5|
+| Sygnał | Pin |
+| :----: | :-: |
+|  CH1   | PA5 |
 
 </p>
 
@@ -233,13 +243,13 @@ W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezag
 
 <p align = center>
 
-|Pin|
-|:-:|
-|PB12|
-|PB13|
-|PD10|
-|PD13|
-|PE15|
+| Pin  |
+| :--: |
+| PB12 |
+| PB13 |
+| PD10 |
+| PD13 |
+| PE15 |
 
 </p>
 
@@ -248,6 +258,7 @@ W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezag
 ## Kosztorys
 
 ### Ceny jednostkowe komponentów
+
 - moduł Bluetooth: 27,80 zł
 - mikroprocesor: 39,20 zł
 - buzzer: 5,90 zł
@@ -260,8 +271,11 @@ W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezag
 - termopara typu K: 21,47 zł
 - chip do interpretowania napięć: 49,98 zł
 - obudowa: 10 zł
+
 ### Sumaryczna cena komponentów urządzenia
+
 485,05 zł
 
 ### Potencjalna cena rynkowa urządzenia
+
 679,07 zł - przyjąłem 140% ceny komponentów aby pokryć koszty produkcji i zapewnić marżę dla wytwórcy
