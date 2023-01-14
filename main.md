@@ -16,7 +16,7 @@ W projekcie przedstawiono także schemat elektryczny potencjalnego urządzenia o
 
 ## Specyfikacja urządzenia
 
-Projektowane urządzenie stanowi kompaktowe i przystępne cenowo rozwiązanie do monitorowania temperatory przy pomocy termopary, z odczytem w czasie rzeczywistym lokalnie i zdalnie oraz zapisem na zewnętrznym nośniku.
+Projektowane urządzenie stanowi kompaktowe i przystępne cenowo rozwiązanie do monitorowania temperatory przy pomocy termopary, z odczytem w czasie rzeczywistym lokalnie i zdalnie oraz zapisem na zewnętrznym nośniku. Urządzenie oparte jest o mikroprocesor: [STM32L151QDH6](https://www.mouser.pl/ProductDetail/STMicroelectronics/STM32L151QDH6?qs=pmcUWs1B1IIEPym5rr0MIA%3D%3D)
 
 ## Funkcjonalności
 
@@ -309,3 +309,7 @@ W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezag
 ### Potencjalna cena rynkowa urządzenia
 
 679,07 zł - przyjąłem 140% ceny komponentów aby pokryć koszty produkcji i zapewnić marżę dla wytwórcy
+
+## Pliki źródłowe projektu
+
+pliki źródłowe projektu wraz z odniesieniami do źródeł (znajdujących się w GitHub Issues - używanych do definiowania zadań) są dostępne w [publicznym repozytorium](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project)
