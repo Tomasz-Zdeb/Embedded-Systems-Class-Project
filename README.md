@@ -71,9 +71,9 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 - [x] **Issue**: Ustalenie funkcjonalności projektu
 - [x] Utworzenie **issues** odpowiadających wszystkim funkcjonalnościom
 - [x] Utworzenie **issues** odpowiadających pozostałym elementom realizacji projektu jak: **stworzenie schematu elektrycznego**
-- [ ] Realizacja rzeczonych issues
-- [ ] Publikacja projektu w formacie `.pdf`
-- [ ] Uzupełnienie składu grupy
+- [X] Realizacja rzeczonych issues
+- [X] Uzupełnienie składu grupy
+- [X] Publikacja projektu w formacie `.pdf`
 - [ ] Dostarczenie projektu do prowadzącego laboratorium
 
 ## Schemat elektryczny
