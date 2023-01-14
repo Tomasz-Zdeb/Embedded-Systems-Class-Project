@@ -82,7 +82,39 @@ Pomiar temperatury odbywa się za pomocą termopar typu K. Typ K został wybrany
 
 ### Zapisywanie szeregu czasowego pomiarów na karcie Micro SD
 
-[Issue 21](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/21)
+Mikroprocesor **STM32L151QDH6** obsługuje funkcjonalność **SDIO** czyli natywną obsługę kart **SD** i **micro SD**.
+
+#### Karta
+
+Urządzenie korzysta z [karty SD](https://www.mouser.pl/ProductDetail/SanDisk/SDSDAF3-008G-I?qs=1mbolxNpo8fZAfuISob5lQ%3D%3D&fbclid=IwAR3uOF-8bRSwpAjd_N-QHTMrXoeQ3epMvccDN1hPOX3yTVwqzyb5hUU9yYw) umieszczonej wewnątrz [gniazda](https://www.mouser.pl/ProductDetail/Amphenol-Commercial-Products/GSD090012SEU?qs=tRxQeHRxj%252BXvWoySYux1gA%3D%3D&fbclid=IwAR05BEZquKpICgIlDTuL0jnoq6x6cgd6fhGVbJ8ECmOt5Kil7ea-M47Jce8). Karta z serii **Industrial** cechuje się dobrymi parametrami przesyłu jak i parametrami związanymi z wytrzymałością na warunki pracy (według [dokumentacji](https://www.mouser.pl/datasheet/2/669/SanDisk_02052018_SDSDAF3_SDSDQAF3-1285144.pdf)).
+
+<p align="center">
+
+| Wielkość pamięci | Maksymalna prędkość odczytu - zapisu | Zakres napięcia wejściowego |
+| :----------------: | :--------------: | :-------------------------: |
+| 8 GB |     80 MB/s - 50 MB/s   |     2.7 V - 3.6 V      |
+
+</p>
+
+#### Funkcjonalność
+
+Urządzenie wykorzystuje czterobitowy tryb przesyłu (alternatywą był tryb jednobitowy), co wymagało zastosowania trzech dodatkowych linii danych, ale pozwala na osiągnięcie większej przepustowości komunikacji, co w związku z możliwością rozszerzenia urządzenia o dodatkowy moduł zwiększający maksymalną ilość podłączonych termopar jest uzasadnione.
+
+Zgodnie z [artykułem](https://controllerstech.com/interface-sd-card-with-sdio-in-stm32/?fbclid=IwAR2p-ghQLy9oqxvOHQ20ZAalOFvRGLVjqF9gRw9ewYPpdKlW8OFwY_Fl_N8) przy prawidłowym podłączeniu, obsługa zapisu i odczytu sprowadza się do odpowiedniej konfiguracji w trakcie pisania oprogramowania dla urządzenia.
+
+Sposób zapisu danych na karcie polega na tworzeniu oddzielnego pliku dla każdej z termopar (nazewnictwo odpowiadające numerowi termopary) i umieszczania danych według ustalonego formatu, np.
+
+```text
+[YYYY-MM-DD-HH-mm-SS-miliseconds]<VALUE>
+```
+
+albo:
+
+```text
+[<miliseconds_since_epoch>]<VALUE>
+```
+
+urządzenie dysponowałoby kilkoma formatami zapisu, co możnaby zmieniać (np. poprzez zastosowanie zworek - mikroprocesor dysponuje dużą liczą niezagospodarowanych pinów, albo poprzez zaimplementowanie menu sterowanego przyciskami)
 
 ### Komunikacja przy pomocy interfejsu Bluetooth
 
@@ -107,8 +139,6 @@ Moduł **BMD-330** jest stosunkowo złożonym urządzeniem zawierającym własny
 </p>
 
 Zestawienie pinów modułu jest również bardzo obszerne, dlatego ze względu na przejrzystość schematu, stworzyliśmy własny model urządzenia zawierający jedynie używane przez nas linie, czyli zasilanie i linie interfejsu **I2C**.
-
-[Issue 26](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/26)
 
 ### Emisja sygnałów dźwiękowych po przekroczeniu zadanej wartości progowej temperatury
 
