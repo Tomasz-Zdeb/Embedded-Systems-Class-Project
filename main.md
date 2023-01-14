@@ -78,7 +78,19 @@ Pomiar temperatury odbywa się za pomocą termopar typu K. Typ K został wybrany
 
 ### Monitoring pomiaru w czasie rzeczywistym na alfanumerycznym ekranie LCD
 
-[Issue 15](https://github.com/Tomasz-Zdeb/Embedded-Systems-Class-Project/issues/15)
+#### Funkcjonalność
+
+W urządzeniu do wyświetlania aktualnych wyników pomiarów wybraliśmy [LCD 2x16 wraz z konwerterem I²C LCM1602](https://botland.com.pl/wyswietlacze-alfanumeryczne-i-graficzne/2351-wyswietlacz-lcd-2x16-znakow-niebieski-konwerter-i2c-lcm1602-5904422309244.html). Możemy sterować zarówno wyświetlanym tekstem jak i podświetleniem, włączając lub wyłączając je w dowolnej chwili.  
+
+#### Interfejs
+
+Mikrokontroler, jako master w magistrali I2C, wysyła komendy i dane do konwertera I²C, który przetwarza je i przesyła do wyświetlacza LCD. To pozwala na komunikację między mikrokontrolerem, a wyświetlaczem za pomocą tylko dwóch linii SDA i SCL, zamiast wielu linii zwykłego interfejsu.
+
+#### Schemat podłączenia konwertera i wyświetlacza
+
+<p align="center">
+  <img src="./images/lcm1602_and_lcd2x16.png.png" width=500px />
+</p>
 
 ### Zapisywanie szeregu czasowego pomiarów na karcie Micro SD
 
