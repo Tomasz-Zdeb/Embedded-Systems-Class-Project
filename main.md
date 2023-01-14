@@ -89,8 +89,10 @@ Mikrokontroler, jako master w magistrali I2C, wysyła komendy i dane do konwerte
 #### Schemat podłączenia konwertera i wyświetlacza
 
 <p align="center">
-  <img src="./images/lcm1602_and_lcd2x16.png.png" width=500px />
+<img src="./images/lcm1602_and_lcd2x16.png" width=500px />
 </p>
+
+Warto też zauważyć, że w naszym konwerterze znajdują się niewykorzystane zworki do zmiany adresu. Z racji, iż mamy tylko jedno jedno urządzenie nie musimy zmieniać adresu.
 
 ### Zapisywanie szeregu czasowego pomiarów na karcie Micro SD
 
