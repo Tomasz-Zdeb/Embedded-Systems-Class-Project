@@ -92,7 +92,7 @@ Mikrokontroler, jako master w magistrali I2C, wysyła komendy i dane do konwerte
 <img src="./images/lcm1602_and_lcd2x16.png" width=500px />
 </p>
 
-Warto też zauważyć, że w naszym konwerterze znajdują się niewykorzystane zworki do zmiany adresu. Z racji, iż mamy tylko jedno jedno urządzenie nie musimy zmieniać adresu.
+Warto też zauważyć, że w naszym konwerterze znajdują się niewykorzystane zworki do zmiany adresu. Z racji, iż mamy tylko jedno urządzenie nie musimy zmieniać adresu.
 
 ### Zapisywanie szeregu czasowego pomiarów na karcie Micro SD
 
