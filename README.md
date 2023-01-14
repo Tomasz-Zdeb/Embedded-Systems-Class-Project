@@ -82,6 +82,13 @@ Na podstawie researchu przeprowadzonego w [Issue: #4](https://github.com/Tomasz-
 
 Schemat elektyczny znajduje się w katalogu: `/schematics/`
 
+## Zadania których nie udało się zrealizować
+
+- opis menu wraz z obsługą przy pomocy przycisków
+- graficzny projekt gotowego urządzenia wraz z obudową
+- opis modułu rozszerzeń
+- przygotwanie kilku wariantów wyposażenia (wraz z cennikiem)
+
 ## Materiały
 
 <p align="center">
