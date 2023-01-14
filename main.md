@@ -301,6 +301,8 @@ W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezag
 - termopara typu K: 21,47 zł
 - chip do interpretowania napięć: 49,98 zł
 - obudowa: 10 zł
+- Semiconductor SC18IS606PWJ: 17,94zł 
+- 
 
 ### Sumaryczna cena komponentów urządzenia
 
