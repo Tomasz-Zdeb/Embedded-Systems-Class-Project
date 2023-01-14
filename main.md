@@ -299,6 +299,10 @@ W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezag
 
 ## Schemat elektryczny
 
+<p align="center">
+  <img src="./images/schemat.png" width=600px />
+</p>
+
 ## Kosztorys
 
 ### Ceny jednostkowe komponentów
