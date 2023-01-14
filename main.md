@@ -299,16 +299,18 @@ W przypadku wejść cyfrowych, konfiguracja polega na arbitralnym wyborze niezag
 - karta pamieci: 293,70 zł
 - wyświetlacz LCD + konwerter: 24,70 zł
 - termopara typu K: 21,47 zł
-- chip do interpretowania napięć: 49,98 zł
+- chip do interpretowania napięć x3: 49,98 zł (149,94 zł)
 - obudowa: 10 zł
+- interfejs wyspecjalizowany Semiconductor SC18IS606PWJ: 17,94 zł
 
 ### Sumaryczna cena komponentów urządzenia
 
-485,05 zł
+652,93 zł
 
 ### Potencjalna cena rynkowa urządzenia
 
-679,07 zł - przyjąłem 140% ceny komponentów aby pokryć koszty produkcji i zapewnić marżę dla wytwórcy
+914,10 zł - przyjąłem 140% ceny komponentów aby pokryć koszty produkcji i zapewnić marżę dla wytwórcy
+(cena jest podana przy zakupie jednego urządzenia, w przypadku zamówień hurtowych cena może być nisza nawet o 30%)
 
 ## Pliki źródłowe projektu
 
