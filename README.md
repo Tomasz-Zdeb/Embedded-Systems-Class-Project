@@ -74,7 +74,7 @@ W ramach zaliczenia przedmiotu jesteśmy zobowiązani grupowo wykonać wspólny 
 - [X] Realizacja rzeczonych issues
 - [X] Uzupełnienie składu grupy
 - [X] Publikacja projektu w formacie `.pdf`
-- [ ] Dostarczenie projektu do prowadzącego laboratorium
+- [X] Dostarczenie projektu do prowadzącego laboratorium (projekt zaliczony na ocenę: 5)
 
 ## Schemat elektryczny
 
